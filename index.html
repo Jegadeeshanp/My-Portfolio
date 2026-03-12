@@ -82,20 +82,20 @@ background:radial-gradient(circle,rgba(26,107,94,.04) 0%,transparent 70%);pointe
 display:flex;flex-direction:column;align-items:center;text-align:center;
 max-width:700px;width:100%;position:relative;z-index:1;
 }
-.hero-photo-wrap{margin-bottom:1.8rem;position:relative;}
+.hero-photo-wrap{margin-bottom:2rem;position:relative;}
 .hero-photo-circle{
-width:200px;height:200px;
-border-radius:20px;
+width:240px;height:290px;
+border-radius:22px;
 overflow:hidden;
-box-shadow:0 16px 60px rgba(24,71,240,.18),0 4px 16px rgba(0,0,0,.1);
+box-shadow:0 20px 70px rgba(24,71,240,.2),0 4px 16px rgba(0,0,0,.1);
 border:4px solid #fff;
 position:relative;z-index:1;
 }
 .hero-photo-circle img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 .hero-name{
 font-family:‘Cormorant Garamond’,serif;
-font-size:clamp(3.5rem,8vw,6.5rem);
-font-weight:700;letter-spacing:.05em;line-height:1;
+font-size:clamp(2rem,4.5vw,3.4rem);
+font-weight:700;letter-spacing:.08em;line-height:1.05;
 text-transform:uppercase;
 background:linear-gradient(135deg,#0E0E0E 0%,#1847F0 55%,#1A6B5E 100%);
 -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
@@ -104,6 +104,7 @@ margin-bottom:.7rem;
 .hero-roles{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;margin-bottom:1.2rem}
 .hero-role-item{font-size:.82rem;font-weight:600;color:var(–ink3)}
 .hero-role-dot{width:4px;height:4px;background:var(–accent);border-radius:50%}
+.hero-role-sep{font-size:.82rem;font-weight:700;color:var(–accent);line-height:1;}
 .hero-bio{font-size:.97rem;font-weight:300;color:var(–ink3);line-height:1.75;margin-bottom:2rem;max-width:520px;}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:2rem}
 .hero-socials{display:flex;gap:9px;align-items:center;justify-content:center;flex-wrap:wrap}
@@ -397,9 +398,12 @@ footer{background:#050505;padding:20px 5%;text-align:center;font-size:.71rem;col
       </div>
       <h1 class="hero-name">Jegadeeshan P</h1>
       <div class="hero-roles">
-        <span class="hero-role-item">Technology Leader</span><div class="hero-role-dot"></div>
-        <span class="hero-role-item">Tech Enthusiast</span><div class="hero-role-dot"></div>
-        <span class="hero-role-item">System Builder</span><div class="hero-role-dot"></div>
+        <span class="hero-role-item">Technology Leader</span>
+        <span class="hero-role-sep">•</span>
+        <span class="hero-role-item">Tech Enthusiast</span>
+        <span class="hero-role-sep">•</span>
+        <span class="hero-role-item">System Builder</span>
+        <span class="hero-role-sep">•</span>
         <span class="hero-role-item">Lifelong Learner</span>
       </div>
       <p class="hero-bio">Exploring technology, productivity systems, and long-term thinking.<br>Building structured approaches to learning, work, and life.</p>
@@ -414,7 +418,7 @@ footer{background:#050505;padding:20px 5%;text-align:center;font-size:.71rem;col
       <div class="hero-socials">
         <a href="https://github.com/Jegadeeshanp" target="_blank" class="hero-soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
         <a href="https://www.linkedin.com/in/jegadeeshanp/" target="_blank" class="hero-soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <a href="mailto:jegadeeshan88@gmail.com" class="hero-soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        <a href="/cdn-cgi/l/email-protection#a5cfc0c2c4c1c0c0d6cdc4cb9d9de5c2c8c4ccc98bc6cac8" class="hero-soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
       </div>
     </div>
   </div>
@@ -824,7 +828,7 @@ footer{background:#050505;padding:20px 5%;text-align:center;font-size:.71rem;col
   <footer>&copy; 2025 Jegadeeshan Panneerselvam &middot; Engineering Adviser @ Fiserv</footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 (function(){
 var pages=[‘home’,‘about’,‘resume’,‘projects’,‘highlights’,‘lifeos’,‘contact’];
@@ -863,7 +867,7 @@ sb.addEventListener(‘click’,function(){
 this.innerHTML=’✓ Sent!’;this.style.background=’#1A6B5E’;
 var b=this;
 setTimeout(function(){
-b.innerHTML=’<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send Message’;
+b.innerHTML=’<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message’;
 b.style.background=’’;
 },3000);
 });
