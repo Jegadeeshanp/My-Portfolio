@@ -29,7 +29,7 @@ img{display:block}
 }
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;height:var(–nav-h);
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(–nav-h);
 background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
 border-bottom:1px solid var(–border);display:flex;align-items:center;padding:0 6%;gap:1rem}
 .nav-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:.94rem;color:var(–ink);cursor:pointer;flex:1;white-space:nowrap}
@@ -37,7 +37,7 @@ border-bottom:1px solid var(–border);display:flex;align-items:center;padding:0
 .nav-slash{color:var(–ink4);font-weight:300;margin:0 3px}
 .nav-role{font-weight:400;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(–ink4)}
 .nav-links{display:flex;gap:2px;align-items:center}
-.nav-links a{font-size:.71rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(–ink4);padding:6px 10px;border-radius:100px;transition:all .2s;cursor:pointer;white-space:nowrap}
+.nav-links a{font-size:.71rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(–ink4);padding:6px 10px;border-radius:100px;transition:all .2s;cursor:pointer;white-space:nowrap;pointer-events:auto;position:relative;z-index:10;}
 .nav-links a:hover{color:var(–accent);background:rgba(24,71,240,.07)}
 .nav-links a.active{color:var(–accent);background:rgba(24,71,240,.1)}
 .hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;border-radius:8px}
@@ -60,9 +60,9 @@ color:var(–ink3);padding:13px 16px;border-radius:10px;transition:all .2s;curso
 .page-tag p{font-size:.79rem;color:var(–ink4);font-style:italic;letter-spacing:.02em}
 
 /* ── BUTTONS ── */
-.btn-p{background:var(–accent);color:#fff;padding:12px 26px;border-radius:100px;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(–accent);transition:all .22s;display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.btn-p{background:var(–accent);color:#fff;padding:12px 26px;border-radius:100px;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(–accent);transition:all .22s;display:inline-flex;align-items:center;gap:7px;cursor:pointer;pointer-events:auto;position:relative;z-index:10;}
 .btn-p:hover{background:#0f35c4;border-color:#0f35c4;transform:translateY(-2px);box-shadow:0 8px 24px rgba(24,71,240,.3)}
-.btn-g{background:transparent;color:var(–ink);padding:12px 26px;border-radius:100px;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(–border);transition:all .22s;display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.btn-g{background:#fff;color:#111;padding:12px 26px;border-radius:100px;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid #111;transition:all .22s;display:inline-flex;align-items:center;gap:7px;cursor:pointer;pointer-events:auto;position:relative;z-index:10;}
 .btn-g:hover{border-color:var(–ink);transform:translateY(-2px);box-shadow:var(–sh)}
 .btn-dk{background:var(–ink);color:#fff;padding:12px 26px;border-radius:100px;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(–ink);transition:all .22s;display:inline-flex;align-items:center;gap:7px;cursor:pointer}
 .btn-dk:hover{background:#222;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
@@ -94,10 +94,10 @@ position:relative;z-index:1;
 .hero-photo-circle img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 .hero-name{
 font-family:‘Cormorant Garamond’,serif;
-font-size:clamp(2rem,4.5vw,3.4rem);
-font-weight:700;letter-spacing:.08em;line-height:1.05;
+font-size:clamp(2rem,3.5vw,2.8rem);
+font-weight:700;letter-spacing:.1em;line-height:1.1;
 text-transform:uppercase;
-background:linear-gradient(135deg,#0E0E0E 0%,#1847F0 55%,#1A6B5E 100%);
+background:linear-gradient(135deg,#0E0E0E 0%,#1847F0 60%,#1A6B5E 100%);
 -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 margin-bottom:.7rem;
 }
@@ -418,7 +418,7 @@ footer{background:#050505;padding:20px 5%;text-align:center;font-size:.71rem;col
       <div class="hero-socials">
         <a href="https://github.com/Jegadeeshanp" target="_blank" class="hero-soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
         <a href="https://www.linkedin.com/in/jegadeeshanp/" target="_blank" class="hero-soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <a href="/cdn-cgi/l/email-protection#a5cfc0c2c4c1c0c0d6cdc4cb9d9de5c2c8c4ccc98bc6cac8" class="hero-soc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        <a data-page="contact" class="hero-soc" style="cursor:pointer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
       </div>
     </div>
   </div>
@@ -794,7 +794,7 @@ footer{background:#050505;padding:20px 5%;text-align:center;font-size:.71rem;col
     <h2 class="contact-hero-h">Open to New Opportunities</h2>
     <p class="contact-hero-sub">Engineering Adviser with 16+ years experience across fintech, embedded and mobile platforms. Let's build something remarkable.</p>
     <div class="contact-btns">
-      <a href="/cdn-cgi/l/email-protection#81ebe4e6e0e5e4e4f2e9e0efb9b9c1e6ece0e8edafe2eeec" class="contact-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="__cf_email__" data-cfemail="4e242b292f2a2b2b3d262f2076760e29232f2722602d2123">[email&#160;protected]</span></a>
+      <a href="mailto:jegadeeshan88@gmail.com" class="contact-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="__cf_email__" data-cfemail="4e242b292f2a2b2b3d262f2076760e29232f2722602d2123">[email&#160;protected]</span></a>
       <a href="https://www.linkedin.com/in/jegadeeshanp/" target="_blank" class="contact-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
       <a href="https://github.com/Jegadeeshanp" target="_blank" class="contact-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
     </div>
@@ -806,7 +806,7 @@ footer{background:#050505;padding:20px 5%;text-align:center;font-size:.71rem;col
         <div class="contact-info-sub-h">Open to New Opportunities</div>
         <div class="contact-info-desc">Engineering Adviser with 16+ years experience across fintech, embedded and mobile platforms. Let's build something remarkable.</div>
         <div class="contact-links">
-          <a href="/cdn-cgi/l/email-protection#305a5557515455554358515e080870575d51595c1e535f5d" class="c-link"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="__cf_email__" data-cfemail="2f454a484e4b4a4a5c474e4117176f48424e4643014c4042">[email&#160;protected]</span><span class="c-link-lbl">Email</span></a>
+          <a href="mailto:jegadeeshan88@gmail.com" class="c-link"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="__cf_email__" data-cfemail="2f454a484e4b4a4a5c474e4117176f48424e4643014c4042">[email&#160;protected]</span><span class="c-link-lbl">Email</span></a>
           <a href="https://www.linkedin.com/in/jegadeeshanp/" target="_blank" class="c-link"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>linkedin.com/in/jegadeeshanp<span class="c-link-lbl">LinkedIn</span></a>
           <a href="https://github.com/Jegadeeshanp" target="_blank" class="c-link"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>github.com/Jegadeeshanp<span class="c-link-lbl">GitHub</span></a>
           <div class="c-link"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, Karnataka, India<span class="c-link-lbl">Location</span></div>
@@ -828,50 +828,82 @@ footer{background:#050505;padding:20px 5%;text-align:center;font-size:.71rem;col
   <footer>&copy; 2025 Jegadeeshan Panneerselvam &middot; Engineering Adviser @ Fiserv</footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
+<script>
 (function(){
-var pages=[‘home’,‘about’,‘resume’,‘projects’,‘highlights’,‘lifeos’,‘contact’];
-function showPage(id){
-if(pages.indexOf(id)===-1)return;
-pages.forEach(function(p){
-var el=document.getElementById(‘page-’+p);if(el)el.classList.remove(‘active’);
-var n1=document.getElementById(‘nav-’+p);if(n1)n1.classList.remove(‘active’);
-var n2=document.getElementById(‘mnav-’+p);if(n2)n2.classList.remove(‘active’);
-});
-var t=document.getElementById(‘page-’+id);if(t)t.classList.add(‘active’);
-var n=document.getElementById(‘nav-’+id);if(n)n.classList.add(‘active’);
-var m=document.getElementById(‘mnav-’+id);if(m)m.classList.add(‘active’);
-window.scrollTo(0,0);
-document.getElementById(‘mobileDrawer’).classList.remove(‘open’);
-document.getElementById(‘hamburger’).classList.remove(‘open’);
-}
-document.addEventListener(‘click’,function(e){
-var el=e.target.closest(’[data-page]’);
-if(el){e.preventDefault();showPage(el.getAttribute(‘data-page’));}
-});
-document.getElementById(‘hamburger’).addEventListener(‘click’,function(e){
-e.stopPropagation();
-this.classList.toggle(‘open’);
-document.getElementById(‘mobileDrawer’).classList.toggle(‘open’);
-});
-document.addEventListener(‘click’,function(e){
-if(!e.target.closest(’#mobileDrawer’)&&!e.target.closest(’#hamburger’)){
-document.getElementById(‘mobileDrawer’).classList.remove(‘open’);
-document.getElementById(‘hamburger’).classList.remove(‘open’);
-}
-});
-var sb=document.getElementById(‘sendBtn’);
-if(sb){
-sb.addEventListener(‘click’,function(){
-this.innerHTML=’✓ Sent!’;this.style.background=’#1A6B5E’;
-var b=this;
-setTimeout(function(){
-b.innerHTML=’<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message’;
-b.style.background=’’;
-},3000);
-});
-}
+  var PAGES = ['home','about','resume','projects','highlights','lifeos','contact'];
+
+  function showPage(id){
+    if(PAGES.indexOf(id) === -1) return;
+    PAGES.forEach(function(p){
+      var pg = document.getElementById('page-'+p);
+      if(pg) pg.classList.remove('active');
+      var nv = document.getElementById('nav-'+p);
+      if(nv) nv.classList.remove('active');
+      var mn = document.getElementById('mnav-'+p);
+      if(mn) mn.classList.remove('active');
+    });
+    var page = document.getElementById('page-'+id);
+    if(page) page.classList.add('active');
+    var nav  = document.getElementById('nav-'+id);
+    if(nav)  nav.classList.add('active');
+    var mnav = document.getElementById('mnav-'+id);
+    if(mnav) mnav.classList.add('active');
+    window.scrollTo(0,0);
+    closeMobile();
+  }
+
+  function closeMobile(){
+    var d = document.getElementById('mobileDrawer');
+    var b = document.getElementById('hamburger');
+    if(d) d.classList.remove('open');
+    if(b) b.classList.remove('open');
+  }
+
+  // Capture-phase listener — fires before anything else, walks up DOM
+  document.addEventListener('click', function(e){
+    var el = e.target;
+    while(el && el !== document.body){
+      var pg = el.getAttribute ? el.getAttribute('data-page') : null;
+      if(pg){
+        e.preventDefault();
+        e.stopPropagation();
+        showPage(pg);
+        return;
+      }
+      el = el.parentNode;
+    }
+  }, true);
+
+  // Hamburger toggle
+  var burger = document.getElementById('hamburger');
+  if(burger){
+    burger.addEventListener('click', function(e){
+      e.stopPropagation();
+      this.classList.toggle('open');
+      var d = document.getElementById('mobileDrawer');
+      if(d) d.classList.toggle('open');
+    });
+  }
+
+  // Close mobile on outside click
+  document.addEventListener('click', function(e){
+    var d = document.getElementById('mobileDrawer');
+    var b = document.getElementById('hamburger');
+    if(d && b && !b.contains(e.target) && !d.contains(e.target)){
+      closeMobile();
+    }
+  });
+
+  // Send button
+  var sb = document.getElementById('sendBtn');
+  if(sb){
+    sb.addEventListener('click', function(){
+      this.textContent = '✓ Sent!';
+      this.style.background = '#1A6B5E';
+      var btn = this;
+      setTimeout(function(){ btn.textContent = 'Send Message'; btn.style.background = ''; }, 3000);
+    });
+  }
 })();
 </script>
 
